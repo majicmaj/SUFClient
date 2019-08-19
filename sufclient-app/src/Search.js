@@ -6,7 +6,7 @@ class Main extends Component {
 
         return (
             <div>
-            <form>
+            <form className= "Search container">
                 <label>Start date: </label>
                 <input type="text" name="Startdate"></input>
                 <label>End date: </label>
@@ -19,11 +19,11 @@ class Main extends Component {
                 <input type="text" name="Spaces"></input>
             </form>
             <footer>
-                <form>
+                <form className="Advanced container">
                 <label>Type </label>
-                <input type="text" name="Startdate"></input>
+                <input type="text" name="Type"></input>
                 <label>Price </label>
-                <input type="text" name="Enddate"></input>
+                <input type="text" name="Price"></input>
                 </form>
             
             </footer>
