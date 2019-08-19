@@ -1,0 +1,26 @@
+nav {
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+}
+h1 {
+    margin: 0;
+    padding-right: 10px;
+}
+.left {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.right {
+    display: flex;
+    justify-content: space-between;
+}
+
+li {
+    text-decoration: none;
+    list-style: none;
+    padding: 10px;
+}
