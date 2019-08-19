@@ -11,11 +11,10 @@ class Main extends Component {
                     <h1>alot.</h1>
                     <input />
                 </div>
-                <div className = 'right'>
+                <div className='right'>
+                    <li>park</li>
                     <li>host</li>
-                    <li>saved</li>
                     <li>history</li>
-                    <li>messages</li>
                     <li>help</li>
                     <li>profile</li>
                 </div>
