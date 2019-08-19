@@ -19,6 +19,12 @@ class Main extends Component {
                 <input type="text" name="Spaces"></input>
             </form>
             <footer>
+                <form>
+                <label>Type </label>
+                <input type="text" name="Startdate"></input>
+                <label>Price </label>
+                <input type="text" name="Enddate"></input>
+                </form>
             
             </footer>
             </div>
