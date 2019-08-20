@@ -1,0 +1,29 @@
+.options {
+    display: flex;
+    justify-content: space-around;
+}
+
+.option {
+    height: 75px;
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    border: solid 1px #ddd;
+    box-shadow: 2px 2px 3px #ddd;
+}
+
+.option img {
+    height: 100%;
+    width: 80px;
+    object-fit: cover;
+}
+
+div h3 {
+    text-align: center;
+    font-size: 15px;
+    padding: 15px;
+}
+
+div {
+    color: #454545;
+}

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Search from './Search'
+import Home from './Home'
 import Nav from './Nav'
 import './App.css';
 
@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div className="App">
         <Nav />
-        <Search />
+        <Home />
       </div>
     );
   }

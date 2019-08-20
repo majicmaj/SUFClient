@@ -1,20 +1,45 @@
 nav {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #ddd;
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 12px;
 }
-nav input {
+
+.input {
+    min-height: 30px;
+    width: 460px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    box-shadow: 2px 2px 3px #ddd;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+input {
+    height: 30px;
+    font-size: 18px;
+    width: 415px;
+    border: none;
+    font-weight: bold;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+}
+
+.searchIcon {
+    width: 10%;
     height: 32px;
-    width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+    fill: #454545;
 }
+
 h1 {
     font-size: 32px;
     margin: 0;
     padding-right: 10px;
 }
+
 .left {
     display: flex;
     justify-content: space-between;

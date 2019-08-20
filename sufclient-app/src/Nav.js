@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Search from './imgs/search.svg'
 import './Nav.css'
 
 class Main extends Component {
@@ -9,7 +10,11 @@ class Main extends Component {
             <nav>
                 <div className = 'left'>
                     <h1>alot.</h1>
-                    <input />
+                    <div className='input'>
+                        <img className='searchIcon' src={Search}/>
+                        <input type='text' placeholder='Find a spot..' />
+                    </div>
+                    
                 </div>
                 <div className='right'>
                     <li>park</li>

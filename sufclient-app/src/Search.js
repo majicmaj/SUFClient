@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
+import './Search.css'
 
 class Main extends Component {
 
     render() {
 
         return (
-            <div>
-            <form className= "Search container">
+            <div className= 'search'>
+            <form className= "form">
                 <label>Start date: </label>
                 <input type="text" name="Startdate"></input>
                 <label>End date: </label>
