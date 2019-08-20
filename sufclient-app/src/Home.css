@@ -1,6 +1,9 @@
 .options {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    min-height: 100px;
 }
 
 .option {
@@ -10,12 +13,19 @@
     justify-content: space-between;
     border: solid 1px #ddd;
     box-shadow: 2px 2px 3px #ddd;
+    flex: 0 0 auto;
+    margin: 10px;
 }
 
 .option img {
     height: 100%;
     width: 80px;
     object-fit: cover;
+}
+
+.wrapper {
+    margin: 40px;
+    text-align: left;
 }
 
 div h3 {
