@@ -106,7 +106,7 @@ class App extends Component {
               <Route
                 path="/"
                 render={() => {
-                  return <Listing isLoggedIn={this.state.isLoggedIn} />;
+                  return <Home isLoggedIn={this.state.isLoggedIn} />;
                 }}
               />
             </Switch>

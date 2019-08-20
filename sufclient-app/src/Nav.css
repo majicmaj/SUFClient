@@ -1,11 +1,19 @@
-nav {
+.nav {
     border-bottom: 1px solid #ddd;
     display: flex;
     justify-content: space-between;
     padding: 12px;
     background: #fff;
 }
-
+ul{
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+li{
+    width: 100%;
+}
 .input {
     min-height: 10px;
     width: 460px;
@@ -57,15 +65,19 @@ h1 {
     justify-content: space-between;
 }
 
-li {
+.item {
     text-decoration: none;
     list-style: none;
     padding: 16px;
     color: #454545;
 }
 
-li:hover, li:active {
+.item:hover, .item:active {
     background: -webkit-linear-gradient(#ff0, #f90, #f0f);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+#mobile-nav, .sidenav-trigger {
+    display: none;
 }
