@@ -2,9 +2,16 @@ nav {
     border-bottom: 1px solid #ccc;
     display: flex;
     justify-content: space-between;
-    padding: 12px;
+    padding: 10px;
+}
+nav input {
+    height: 32px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
 }
 h1 {
+    font-size: 32px;
     margin: 0;
     padding-right: 10px;
 }
@@ -22,5 +29,5 @@ h1 {
 li {
     text-decoration: none;
     list-style: none;
-    padding: 10px;
+    padding: 14px;
 }
