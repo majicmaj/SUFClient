@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import Home from "./Home";
 import Nav from "./Nav";
 import axios from "axios";
@@ -19,7 +19,8 @@ class App extends Component {
     this.state = {
       email: "",
       password: "",
-      isLoggedIn: false
+      isLoggedIn: false,
+      redirect: false
     };
 
     this.handleLogOut = this.handleLogOut.bind(this);
@@ -84,10 +85,31 @@ class App extends Component {
         localStorage.token = response.data.token
         this.setState({isLoggedIn: true})
         console.log("logged tf in")
+        if ({isLoggedIn: true}) {
+          console.log('trying to redirect')
+          this.setRedirect()
+          console.log(this.state)
+        }
       })
       .catch(err => console.log(err))
 
   }
+  setRedirect = () => {
+    this.setState({redirect : true})
+  }
+  renderRedirect = () => {
+    if (this.state.redirect) {
+      return <Redirect to='/' />
+    }
+  }
+
+//   loggedIn() {
+//     // Checks if there is a saved token and it's still valid
+//     const token = this.getToken() // GEtting token from localstorage
+//     return !!token && !this.isTokenExpired(token) // handwaiving here
+// }
+
+
 
   render() {
     return (
@@ -96,6 +118,7 @@ class App extends Component {
           <Nav isLoggedIn={this.state.isLoggedIn} />
           <div className="body">
             <Switch>
+              {this.renderRedirect()}
               <Route
                 path="/signup"
                 render={props => {
