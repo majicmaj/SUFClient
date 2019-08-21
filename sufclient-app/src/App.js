@@ -11,6 +11,7 @@ import Listing from "./Listing";
 import Search from "./Search";
 import "./App.css";
 import NoMatch from './NoMatch';
+import User from './User'
 
 class App extends Component {
   constructor() {
@@ -166,6 +167,12 @@ class App extends Component {
                 exact path="/"
                 render={props => {
                   return <Home {...props} isLoggedIn={this.state.isLoggedIn} />;
+                }}
+              />
+              <Route
+                exact path="/profile"
+                render={props => {
+                  return <User {...props} />
                 }}
               />
               <Route
