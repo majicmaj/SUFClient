@@ -100,13 +100,18 @@ h1 {
         width: 100%;
     }
     .left {
-        flex-direction: column;
         padding-left: 0;
         padding-right: 0;
     }
     .input {
         width: 100%;
         margin: 0;
+        padding-right: 0;
+        padding-left: 2px;
+    }
+    h1 {
+        font-size: 20px;
+        padding: 10px;
     }
     input {
         width: 100%;
