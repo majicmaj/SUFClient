@@ -74,6 +74,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+<<<<<<< HEAD
         <div>
           <Nav isLoggedIn={this.state.isLoggedIn} />
           <div className="body">
@@ -122,6 +123,11 @@ class App extends Component {
             </Switch>
           </div>
         </div>
+=======
+        <Nav />
+        <Home />
+        <Search />
+>>>>>>> 327621c... reactrouter
       </div>
     );
   }

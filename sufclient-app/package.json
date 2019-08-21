@@ -7,7 +7,12 @@
     "cors": "^2.8.5",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+<<<<<<< HEAD
     "react-materialize": "^3.3.4",
+=======
+    "react-router": "^5.0.1",
+    "react-router-dom": "^5.0.1",
+>>>>>>> 327621c... reactrouter
     "react-scripts": "3.1.1"
   },
   "scripts": {
