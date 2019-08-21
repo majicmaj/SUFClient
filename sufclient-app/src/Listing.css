@@ -1,0 +1,19 @@
+
+.filters {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+}
+
+.location {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-content: flex-start;
+}
+
+
+
+.Listing {
+    border: solid black 3px;
+}

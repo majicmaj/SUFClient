@@ -35,11 +35,10 @@ class Search extends Component {
         console.log("submit")
     }
 
-    handleClick = (evt) => {
-        evt.preventDefault();
-        console.log("button works")
-    }
-
+    // handleClick = (evt) => {
+    //     evt.preventDefault();
+    //     console.log("button works")
+    // }
 
 
     render() {
