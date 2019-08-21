@@ -5,15 +5,18 @@
     padding: 12px;
     background: #fff;
 }
-ul{
+
+ul {
     list-style: none;
     display: flex;
     padding: 0;
     margin: 0;
 }
-li{
+
+li {
     width: 100%;
 }
+
 .input {
     min-height: 10px;
     width: 460px;
@@ -80,4 +83,41 @@ h1 {
 
 #mobile-nav, .sidenav-trigger {
     display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .hide-on-med-and-down {
+        display: none;
+    }
+    ul {
+        list-style: none;
+        display: flex;
+        padding: 0;
+        margin: 0;
+    }
+    li {
+        width: 100%;
+    }
+    .left {
+        flex-direction: column;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .input {
+        width: 100%;
+        margin: 0;
+    }
+    input {
+        width: 100%;
+        margin: 0;
+    }
+    .nav {
+        flex-direction: column;
+        padding: 0;
+    }
+    #mobile-nav, .sidebar-trigger {
+        display: flex;
+        flex-direction: column;
+    }
 }
