@@ -59,8 +59,7 @@
     /* height:50px; */
 }
 
-.search input[type=submit],
-.search input[type=button]
+.search button[type=submit]
 {
     border: none;
     padding: 8px 15px 8px 15px;
@@ -74,8 +73,8 @@
     
 }
 
-.search input[type=submit]:hover,
-.search input[type=button]:hover
+.search button[type=submit]:hover,
+.search button[type=button]:hover
 
 {
     background:#EA7B00;

@@ -9,29 +9,31 @@ class Search extends Component {
         super()
 
         this.state = {
-            startDate: new Date(),
-            endDate: new Date(),
-            location: "",
-            radius: "",
-            spaces: "",
-            type: "",
-            price: "",
-            input: true
+            form: {
+                startDate: new Date(),
+                endDate: new Date(),
+                location: "",
+                radius: "",
+                spaces: "",
+                type: "",
+                price: "",
+                input: true
+            }
 
 
         };
     }
 
-    // changeStart = (e) => {
-    //     this.setState({ startDate: e.target.value })
-    // }
 
     onChange = (e) => {
         this.setState({ startDate: e.target.value })
     }
 
     handleSubmit = (e) => {
-        e.preventDefault()
+        if (!this.validate()) {
+            e.preventDefault()
+            console.log("submit")
+        }
     }
 
     handleClick = (evt) => {
@@ -42,7 +44,6 @@ class Search extends Component {
 
 
     render() {
-        // let { value } = this.state.start
 
 
 
@@ -54,7 +55,7 @@ class Search extends Component {
                 </div>
                 <form className="form" onSubmit={this.handleSubmit}>
                     <fieldset>
-                    <div className="datepicker">
+                        <div className="datepicker">
                             <label className="checkin"> CHECK-IN
                            <div className="calendar"><DatePicker
                                     selected={this.state.startDate}
@@ -102,8 +103,8 @@ class Search extends Component {
                         <label>Type <input type="text" name="Type"></input> </label>
                         <label>Price  <input type="text" name="Price"></input> </label>
                     </fieldset> */}
-                    <label><input className="submit" type="submit" onClick={this.handleClick} value="submit" /></label>
-            
+                    <button className="submit" type="submit" onClick={this.handleClick} value="Submit" >Search</button>
+
                 </form>
             </div>
 
