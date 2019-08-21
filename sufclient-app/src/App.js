@@ -48,6 +48,13 @@ class App extends Component {
       isLoggedIn: false
     });
     localStorage.clear();
+    this.setState({isLoggedIn: false})
+        console.log("logged tf out")
+        if ({isLoggedIn: false}) {
+          console.log('trying to redirect')
+          this.setRedirect()
+          console.log(this.state)
+        }
   }
 
   handleInput(e) {
@@ -102,14 +109,6 @@ class App extends Component {
       return <Redirect to='/' />
     }
   }
-
-//   loggedIn() {
-//     // Checks if there is a saved token and it's still valid
-//     const token = this.getToken() // GEtting token from localstorage
-//     return !!token && !this.isTokenExpired(token) // handwaiving here
-// }
-
-
 
   render() {
     return (
