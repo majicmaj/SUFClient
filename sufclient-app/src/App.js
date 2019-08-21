@@ -8,6 +8,7 @@ import LogInForm from "./authentication/LogInForm/LogInForm";
 import LogOut from "./authentication/LogOut/LogOut";
 import Listing from "./Listing";
 import "./App.css";
+import NoMatch from './NoMatch';
 
 class App extends Component {
   constructor() {
@@ -114,10 +115,13 @@ class App extends Component {
                 }}
               />
               <Route
-                path="/"
+                exact path="/"
                 render={() => {
                   return <Home isLoggedIn={this.state.isLoggedIn} />;
                 }}
+              />
+              <Route 
+                component={NoMatch}
               />
             </Switch>
           </div>
