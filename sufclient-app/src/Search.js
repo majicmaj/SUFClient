@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 // import Calendar from 'react-calendar';
 // import Calendar from 'react-input-calendar'
 import DatePicker from 'react-date-picker'
@@ -17,17 +18,27 @@ class Search extends Component {
                 spaces: "",
                 type: "",
                 price: "",
-                input: true
+                input: true,
+                redirect: false
             }
 
 
         };
     }
 
+    setRedirect = () => {
+        this.setState({
+            redirect: true
+        })
 
-    // onChange = (e) => {
-    //     this.setState({ startDate: e.target.value })
-    // }
+    }
+
+
+    renderRedirect = () => {
+        if (this.state.redirect) {
+            return <Redirect to='/listing' />
+        }
+    }
 
     handleSubmit = (e) => {
         alert(this.state.form)
@@ -35,9 +46,16 @@ class Search extends Component {
         console.log("submit")
     }
 
-    // handleClick = (evt) => {
-    //     evt.preventDefault();
-    //     console.log("button works")
+    handleOnClick = () => {
+        this.setState({ redirect: true })
+        console.log("button works")
+    }
+
+    // renderRedirect = () => {
+    //     if (this.state.redirect) {
+    //         return <Redirect push to='/listing' />;
+    //     }
+    //     return <button onClick={this.handleOnClick} type></button>
     // }
 
 
@@ -75,7 +93,7 @@ class Search extends Component {
                         <label className="location">Location:<select ClassName="dropdown">
                             <option>China Town</option>
                             <option>Down Town</option>
-                            <option>Capitol HIll</option>
+                            <option>Capitol Hill</option>
                             <option>Dupont Circle</option>
                             <option>Logan Circle</option>
                             <option>Shaw</option>
@@ -100,7 +118,10 @@ class Search extends Component {
                         <label>Type <input type="text" name="Type"></input> </label>
                         <label>Price  <input type="text" name="Price"></input> </label>
                     </fieldset> */}
-                    <button className="submit" type="submit" onClick={this.handleSubmit} >Search</button>
+                    <div>
+                        {this.renderRedirect()}
+                        <button className="submit" type="submit" onClick={this.setRedirect} >Search</button>
+                    </div>
 
                 </form>
             </div>
