@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import './LogOut.css'
+import '../SignUpForm.css'
 
 class LogOut extends Component {
   render () {

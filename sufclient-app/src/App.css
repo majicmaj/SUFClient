@@ -23,6 +23,12 @@
   color: #61dafb;
 }
 
+.alot {
+  background: -webkit-linear-gradient(#ff0, #f90, #f0f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

@@ -28,7 +28,7 @@ li {
     padding: 10px;
 }
 
-input {
+.input input {
     height: 20px;
     font-size: 18px;
     width: 415px;
@@ -46,7 +46,7 @@ input:focus, textarea:focus {
     fill: #454545;
 }
 
-h1 {
+.left h1 {
     font-size: 32px;
     margin: 0;
     padding-right: 12px;
@@ -104,7 +104,7 @@ h1 {
         padding-right: 0;
     }
     .input {
-        width: 100%;
+        width: 75%;
         margin: 0;
         padding-right: 0;
         padding-left: 2px;
