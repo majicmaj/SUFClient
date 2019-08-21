@@ -1,0 +1,28 @@
+form input {
+    width: 80%;
+    padding: 15px;
+    font-size: 18px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    box-shadow: 2px 2px 3px #ddd;
+}
+
+form button {
+    background: #f90;
+    width: 88%;
+    padding: 15px;
+    font-size: 20px;
+    color: white;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    box-shadow: 2px 2px 3px #ddd;
+}
+
+.disclaimer {
+    font-style: italic;
+    font-size: 12px;
+}
