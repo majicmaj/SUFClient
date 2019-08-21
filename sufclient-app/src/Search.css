@@ -1,15 +1,28 @@
 .search {
-    width: 80%;
+    max-width:500px;
+    padding: 20px 12px 10px 20px;
     display: flex;
     flex-direction: column;
     padding: 15px;
     text-align: center;
+    border: solid black 2px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+.search label{
+    display: block;
+    margin: 0px 0px 15px 0px;
 }
 
 .form {
-
     display:flex;
     flex-direction: column;
+}
+
+.dropdown{
+
+    max-width: 100px;
 }
 
 .advancedSearch {

@@ -59,9 +59,13 @@ class Search extends Component {
 
         return (
             <div className='search'>
+                <div>
+                    <p>Peace at last</p>
+                    <p>Get alot. off your mind</p>
+                </div>
                 <form className="form" onSubmit={this.handleSubmit}>
                     <div className="datepicker">
-                        <label> Check-In:
+                        <label className="checkin"> Check-In:
                             <DatePicker
                                 selected={this.state.startDate}
                                 selectsStart
@@ -69,7 +73,7 @@ class Search extends Component {
                                 endDate={this.state.endDate}
                                 onChange={this.handleChangeStart}
                             /></label>
-                        <label>Check-Out:
+                        <label className="checkout">Check-Out:
                              <DatePicker
                                 selected={this.state.endDate}
                                 selectsEnd
@@ -79,17 +83,34 @@ class Search extends Component {
                                 minDate={this.state.startDate}
                             /></label>
                     </div>
-                    <div className="location">
-                    <label>Location:
+                    
+                    <label className="location">Location:<select ClassName="dropdown" placeholder="Location">
+                        <option>China Town</option>
+                        <option>Down Town</option>
+                        <option>Capitol HIll</option>
+                        <option>Dupont Circle</option>
+                        <option>Logan Circle</option>
+                        <option>Shaw</option>
+                        <option>Adams Morgan</option>
+                        <option>Columbia Heights</option>
+                        </select>
                     <input type="text" name="Location"></input>
                     </label>
-                    <label>Radius: <input type="text" name="Radius" ></input> </label>
-                    </div>
-                    <label>Spaces:  <input type="text" name="Spaces" ></input></label>
-                    <div className="advancedSearch">
+                    <label className="radius" >Radius:<select ClassName="dropdown" placeholder="Radius">
+                    <option>distance 1</option>
+                        <option>distance 2</option>
+                        <option>distance 3</option>
+                        <option>distance 4</option>
+                        <option>distance 5</option>
+                        <option>distance 6</option>
+                        <option>distance 7</option>
+                        <option>distance 8</option>
+                        </select> <input type="text" name="Radius" ></input> </label>
+                    <label className="spaces">Spaces: <select ClassName="dropdown" placeholder="Spaces"></select> <input type="text" name="Spaces" ></input></label>
+                    {/* <div className="advancedSearch">
                         <label>Type <input type="text" name="Type"></input> </label>
                         <label>Price  <input type="text" name="Price"></input> </label>
-                    </div>
+                    </div> */}
                     <input className="submit" type="submit" onClick={this.handleClick} value="submit" />
                     <p>{validInput}</p>
                 </form>

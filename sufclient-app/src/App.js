@@ -7,6 +7,8 @@ import SignUpForm from "./authentication/SignUpForm/SignUpForm";
 import LogInForm from "./authentication/LogInForm/LogInForm";
 import LogOut from "./authentication/LogOut/LogOut";
 import Listing from "./Listing";
+//So I can see what the form looks like 
+import Search from "./Search";
 import "./App.css";
 
 class App extends Component {
@@ -120,6 +122,7 @@ class App extends Component {
                 }}
               />
             </Switch>
+            <Search/>
           </div>
         </div>
       </div>
