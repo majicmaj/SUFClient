@@ -25,6 +25,7 @@ class Listing extends Component {
     render() {
         console.log("thisss")
         console.log(this.state.data)
+
         if (this.state.data[0]) {
             var listing = this.state.data[0].map( listing => {
                 console.log(listing)
@@ -37,8 +38,6 @@ class Listing extends Component {
                     </div>
             )})
         }
-        
-        
 
         return (
             <div className="Listing">   
@@ -50,7 +49,7 @@ class Listing extends Component {
                             <option>Vehicle 3</option>
                             <option>Vehicle 4</option>
                         </select></li>
-                        <li> {listing}</li>
+                        <li><select>{listing}</select></li>
                         <li></li>
                         <li></li>
                         <li></li>
@@ -58,12 +57,12 @@ class Listing extends Component {
                         <li>Instant lot</li>
                         </ul>
                         </nav>
-                        <div className="location">
+                        {/* <div className="location">
                 <div className="container 1"> container 1</div>
                 <div className="container 2"> container 2</div>
                 <div className="container 3"> container 3</div>
-                <div className="container 4"> container 4</div>
-                </div>
+                <div className="container 4"> container 4</div> */}
+                {/* </div> */}
             </div>
 
         )
