@@ -35,27 +35,16 @@ class Search extends Component {
     }
 
     handleClick = (evt) => {
-        evt.preventDefault()
-
-        this.validateInputs()
-
+        evt.preventDefault();
+        console.log("button works")
     }
 
-    validateInputs = () => {
-
-        if (this.state) {
-            this.setState({ Input: true })
-        } else {
-            this.setState({ Input: false })
-        }
-
-    }
 
 
     render() {
         // let { value } = this.state.start
 
-        let validInput = this.state.input
+
 
         return (
             <div className='search'>
@@ -64,55 +53,57 @@ class Search extends Component {
                     <p>Get alot. off your mind</p>
                 </div>
                 <form className="form" onSubmit={this.handleSubmit}>
+                    <fieldset>
                     <div className="datepicker">
-                        <label className="checkin"> Check-In:
-                            <DatePicker
-                                selected={this.state.startDate}
-                                selectsStart
-                                startDate={this.state.startDate}
-                                endDate={this.state.endDate}
-                                onChange={this.handleChangeStart}
-                            /></label>
-                        <label className="checkout">Check-Out:
-                             <DatePicker
-                                selected={this.state.endDate}
-                                selectsEnd
-                                startDate={this.state.startDate}
-                                endDate={this.state.endDate}
-                                onChange={this.handleChangeEnd}
-                                minDate={this.state.startDate}
-                            /></label>
-                    </div>
-                    
-                    <label className="location">Location:<select ClassName="dropdown" placeholder="Location">
-                        <option>China Town</option>
-                        <option>Down Town</option>
-                        <option>Capitol HIll</option>
-                        <option>Dupont Circle</option>
-                        <option>Logan Circle</option>
-                        <option>Shaw</option>
-                        <option>Adams Morgan</option>
-                        <option>Columbia Heights</option>
+                            <label className="checkin"> CHECK-IN
+                           <div className="calendar"><DatePicker
+                                    selected={this.state.startDate}
+                                    selectsStart
+                                    startDate={this.state.startDate}
+                                    endDate={this.state.endDate}
+                                    onChange={this.handleChangeStart}
+                                /></div></label>
+                            <label className="checkout">CHECK-OUT
+                            <div className="calendar"><DatePicker
+                                    selected={this.state.endDate}
+                                    selectsEnd
+                                    startDate={this.state.startDate}
+                                    endDate={this.state.endDate}
+                                    onChange={this.handleChangeEnd}
+                                    minDate={this.state.startDate}
+                                /></div></label>
+                        </div>
+
+                        <label className="location">Location:<select ClassName="dropdown">
+                            <option>China Town</option>
+                            <option>Down Town</option>
+                            <option>Capitol HIll</option>
+                            <option>Dupont Circle</option>
+                            <option>Logan Circle</option>
+                            <option>Shaw</option>
+                            <option>Adams Morgan</option>
+                            <option>Columbia Heights</option>
                         </select>
-                    <input type="text" name="Location"></input>
-                    </label>
-                    <label className="radius" >Radius:<select ClassName="dropdown" placeholder="Radius">
-                    <option>distance 1</option>
-                        <option>distance 2</option>
-                        <option>distance 3</option>
-                        <option>distance 4</option>
-                        <option>distance 5</option>
-                        <option>distance 6</option>
-                        <option>distance 7</option>
-                        <option>distance 8</option>
+                            <input type="text" name="Location"></input>
+                        </label>
+                        <label className="radius" >Radius:<select ClassName="dropdown" >
+                            <option>distance 1</option>
+                            <option>distance 2</option>
+                            <option>distance 3</option>
+                            <option>distance 4</option>
+                            <option>distance 5</option>
+                            <option>distance 6</option>
+                            <option>distance 7</option>
+                            <option>distance 8</option>
                         </select> <input type="text" name="Radius" ></input> </label>
-                    <label className="spaces">Spaces: <select ClassName="dropdown" placeholder="Spaces"></select> <input type="text" name="Spaces" ></input></label>
-                    {/* <div className="advancedSearch">
+                        <label className="spaces">Spaces: <select ClassName="dropdown" ></select> <input type="text" name="Spaces" ></input></label>
+                    </fieldset>
+                    {/* <fieldset>Advance Search
                         <label>Type <input type="text" name="Type"></input> </label>
                         <label>Price  <input type="text" name="Price"></input> </label>
-                    </div> */}
-                    <input className="submit" type="submit" onClick={this.handleClick} value="submit" />
-                    <p>{validInput}</p>
+                    </fieldset> */}
+                    <label><input className="submit" type="submit" onClick={this.handleClick} value="submit" /></label>
+            
                 </form>
             </div>
 
