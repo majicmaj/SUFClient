@@ -49,7 +49,7 @@ class Listing extends Component {
                             <option>Vehicle 3</option>
                             <option>Vehicle 4</option>
                         </select></li>
-                        <li><select>{listing}</select></li>
+                        <li>{listing}</li>
                         <li></li>
                         <li></li>
                         <li></li>
