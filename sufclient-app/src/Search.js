@@ -31,27 +31,25 @@ class Search extends Component {
     }
 
     handleSubmit = (e) => {
-        this.setState(this.state.value)
+        e.preventDefault()
     }
 
     handleClick = (evt) => {
         evt.preventDefault()
-    
+
         this.validateInputs()
-    
-      }
-    
-      validateInputs= () => {
-    
+
+    }
+
+    validateInputs = () => {
+
         if (this.state) {
-          this.setState({ Input: true })
+            this.setState({ Input: true })
         } else {
-          this.setState({ Input: false })
+            this.setState({ Input: false })
         }
-    
-      }
 
-
+    }
 
 
     render() {
@@ -59,59 +57,43 @@ class Search extends Component {
 
         let validInput = this.state.input
 
-
-
         return (
             <div className='search'>
                 <form className="form" onSubmit={this.handleSubmit}>
-                    {/* <Calendar format='DD/MM/YYYY' date='4-12-2014' /> */}
-                    {/* first Calendar from React */}
-                    {/* <Calendar
-                onChange = {this.changeStart}
-                format='DD/MM/YYYY' date='4-12-2014'
-                value={value}/> */}
                     <div className="datepicker">
-                        <label>Check-in: </label>
-                        <DatePicker
-                            selected={this.state.startDate}
-                            selectsStart
-                            startDate={this.state.startDate}
-                            endDate={this.state.endDate}
-                            onChange={this.handleChangeStart}
-                        />
-                        <label>Check-Out: </label>
-                        <DatePicker
-                            selected={this.state.endDate}
-                            selectsEnd
-                            startDate={this.state.startDate}
-                            endDate={this.state.endDate}
-                            onChange={this.handleChangeEnd}
-                            minDate={this.state.startDate}
-                        />
+                        <label> Check-In:
+                            <DatePicker
+                                selected={this.state.startDate}
+                                selectsStart
+                                startDate={this.state.startDate}
+                                endDate={this.state.endDate}
+                                onChange={this.handleChangeStart}
+                            /></label>
+                        <label>Check-Out:
+                             <DatePicker
+                                selected={this.state.endDate}
+                                selectsEnd
+                                startDate={this.state.startDate}
+                                endDate={this.state.endDate}
+                                onChange={this.handleChangeEnd}
+                                minDate={this.state.startDate}
+                            /></label>
                     </div>
-
-                    <label>Location: </label>
+                    <div className="location">
+                    <label>Location:
                     <input type="text" name="Location"></input>
-                    <label>Radius: </label>
-                    <input type="text" name="Radius"></input>
-                    <label>Spaces: </label>
-                    <input type="text" name="Spaces"></input>
-
-
-                    <div className="advancedSearch">
-                        <label>Type </label>
-                        <input type="text" name="Type"></input>
-                        <label>Price </label>
-                        <input type="text" name="Price"></input>
+                    </label>
+                    <label>Radius: <input type="text" name="Radius" ></input> </label>
                     </div>
-                    <button>
-                    <input type="submit" onClick={this.handleClick} value="submit" />
+                    <label>Spaces:  <input type="text" name="Spaces" ></input></label>
+                    <div className="advancedSearch">
+                        <label>Type <input type="text" name="Type"></input> </label>
+                        <label>Price  <input type="text" name="Price"></input> </label>
+                    </div>
+                    <input className="submit" type="submit" onClick={this.handleClick} value="submit" />
                     <p>{validInput}</p>
-                    </button>
                 </form>
             </div>
-
-
 
         )
     }
