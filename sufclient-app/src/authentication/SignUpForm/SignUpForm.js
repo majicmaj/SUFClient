@@ -4,6 +4,7 @@ import './SignUpForm.css'
 
 class SignUpForm extends Component {
   render () {
+      console.log(this.props)
     return (
       <div>
         <h2>Sign Up</h2>
@@ -18,7 +19,7 @@ class SignUpForm extends Component {
             <label htmlFor='password'>Password</label>
             <input type='text' name='password' onChange={this.props.handleInput} />
           </div>
-          <input value='Submit' type='submit' onClick={this.props.handleSignUp} />
+          <button value='Submit' type='submit' onClick={this.props.handleSignUp} />
         </form>
       </div>
     )

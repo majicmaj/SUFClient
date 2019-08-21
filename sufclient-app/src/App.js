@@ -37,7 +37,14 @@ class App extends Component {
     }
   }
 
-  handleLogOut() {}
+  handleLogOut() {
+    this.setState({
+      email: "",
+      password: "",
+      isLoggedIn: false
+    });
+    localStorage.clear();
+  }
 
   handleInput(e) {
     this.setState({
@@ -46,15 +53,18 @@ class App extends Component {
   }
 
   handleSignUp(e) {
+    console.log("FIRE!");
     e.preventDefault();
     axios
-      .post("http://localhost:3001/user/signup", {
+      .post("https://alot-server.herokuapp.com/user/signup", {
+        withCredentials: true,
         email: this.state.email,
         password: this.state.password
       })
       .then(response => {
         localStorage.token = response.data.token;
         this.setState({ isLoggedIn: true });
+        console.log("SIGNED TF UP");
       })
       .catch(err => console.log(err));
   }
