@@ -72,7 +72,7 @@ class App extends Component {
       .catch(err => console.log(err));
   }
 
-  handleLogIn(e) {}
+  handleLogIn(e) { }
 
   render() {
     return (
@@ -86,6 +86,7 @@ class App extends Component {
                 render={props => {
                   return (
                     <SignUpForm
+                      {...props} 
                       isLoggedIn={this.state.isLoggedIn}
                       handleInput={this.handleInput}
                       handleSignUp={this.handleSignUp}
@@ -98,6 +99,7 @@ class App extends Component {
                 render={props => {
                   return (
                     <LogOut
+                      {...props}
                       isLoggedIn={this.state.isLoggedIn}
                       handleLogOut={this.handleLogOut}
                     />
@@ -109,6 +111,7 @@ class App extends Component {
                 render={props => {
                   return (
                     <LogInForm
+                      {...props}
                       isLoggedIn={this.state.isLoggedIn}
                       handleInput={this.handleInput}
                       handleLogIn={this.handleLogIn}
@@ -118,17 +121,17 @@ class App extends Component {
               />
               <Route
                 exact path="/search"
-                render={() => {
-                  return <Search />
+                render={props => {
+                  return <Search {...props} />
                 }}
               />
               <Route
                 exact path="/"
-                render={() => {
-                  return <Home isLoggedIn={this.state.isLoggedIn} />;
+                render={props => {
+                  return <Home {...props} isLoggedIn={this.state.isLoggedIn} />;
                 }}
               />
-              <Route 
+              <Route
                 component={NoMatch}
               />
             </Switch>
@@ -137,6 +140,6 @@ class App extends Component {
       </div>
     );
   }
-} 
+}
 
 export default App;
