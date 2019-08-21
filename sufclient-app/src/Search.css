@@ -5,6 +5,17 @@
     padding: 15px;
     text-align: center;
 }
+
+.form{
+    border: solid black 2px;
+}
+
+.advancedSearch{
+    border: solid black 2px;
+    display: grid
+}
+
 input {
     width: 30%;
+    border: grey;
 }

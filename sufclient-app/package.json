@@ -6,10 +6,17 @@
     "axios": "^0.19.0",
     "cors": "^2.8.5",
     "react": "^16.9.0",
+    "react-calendar": "^2.19.1",
+    "react-date-picker": "^7.8.1",
+    "react-datepicker": "^2.8.0",
     "react-dom": "^16.9.0",
+<<<<<<< HEAD
 <<<<<<< HEAD
     "react-materialize": "^3.3.4",
 =======
+=======
+    "react-input-calendar": "^0.5.4",
+>>>>>>> 82487ba... Dates
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
 >>>>>>> 327621c... reactrouter
