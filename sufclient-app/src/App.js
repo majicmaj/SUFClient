@@ -72,7 +72,22 @@ class App extends Component {
       .catch(err => console.log(err));
   }
 
-  handleLogIn(e) { }
+  handleLogIn(e) {
+    console.log("log in my dude")
+      e.preventDefault()
+      axios.post('https://alot-server.herokuapp.com/user/login', {
+        withCredentials: true,
+        email: this.state.email,
+        password: this.state.password
+      })
+      .then(response => {
+        localStorage.token = response.data.token
+        this.setState({isLoggedIn: true})
+        console.log("logged tf in")
+      })
+      .catch(err => console.log(err))
+
+  }
 
   render() {
     return (
