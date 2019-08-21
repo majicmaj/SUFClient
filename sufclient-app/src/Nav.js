@@ -6,14 +6,14 @@ import "./Nav.css";
 class Nav extends Component {
   render() {
     let navBarItems = [
-      <NavItem className="item" key={1} href="/">
+      <NavItem className="item" key={1} href="/park">
         Park
       </NavItem>,
-      <NavItem className="item" key={2} href="/">
+      <NavItem className="item" key={2} href="/host">
         Host
       </NavItem>,
-      <NavItem className="item" key={3} href="/">
-        Help
+      <NavItem className="item" key={3} href="/search">
+        Search
       </NavItem>
     ];
 

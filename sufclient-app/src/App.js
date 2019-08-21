@@ -117,6 +117,12 @@ class App extends Component {
                 }}
               />
               <Route
+                exact path="/search"
+                render={() => {
+                  return <Search />
+                }}
+              />
+              <Route
                 exact path="/"
                 render={() => {
                   return <Home isLoggedIn={this.state.isLoggedIn} />;
@@ -126,7 +132,6 @@ class App extends Component {
                 component={NoMatch}
               />
             </Switch>
-            <Search/>
           </div>
         </div>
       </div>
