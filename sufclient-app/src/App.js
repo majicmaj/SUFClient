@@ -172,6 +172,7 @@ class App extends Component {
                 component={NoMatch}
               />
             </Switch>
+            <Listing />
           </div>
         </div>
       </div>

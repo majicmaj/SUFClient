@@ -25,15 +25,14 @@ class Search extends Component {
     }
 
 
-    onChange = (e) => {
-        this.setState({ startDate: e.target.value })
-    }
+    // onChange = (e) => {
+    //     this.setState({ startDate: e.target.value })
+    // }
 
     handleSubmit = (e) => {
-        if (!this.validate()) {
-            e.preventDefault()
-            console.log("submit")
-        }
+        alert(this.state.form)
+        e.preventDefault()
+        console.log("submit")
     }
 
     handleClick = (evt) => {
@@ -46,14 +45,13 @@ class Search extends Component {
     render() {
 
 
-
         return (
             <div className='search'>
                 <div>
                     <p>Peace at last</p>
                     <p>Get alot. off your mind</p>
                 </div>
-                <form className="form" onSubmit={this.handleSubmit}>
+                <form className="form">
                     <fieldset>
                         <div className="datepicker">
                             <label className="checkin"> CHECK-IN
@@ -103,7 +101,7 @@ class Search extends Component {
                         <label>Type <input type="text" name="Type"></input> </label>
                         <label>Price  <input type="text" name="Price"></input> </label>
                     </fieldset> */}
-                    <button className="submit" type="submit" onClick={this.handleClick} value="Submit" >Search</button>
+                    <button className="submit" type="submit" onClick={this.handleSubmit} >Search</button>
 
                 </form>
             </div>
