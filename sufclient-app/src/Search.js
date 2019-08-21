@@ -9,89 +9,102 @@ class Search extends Component {
         super()
 
         this.state = {
-            startDate: new Date(),
-            endDate: new Date(),
-            location: "",
-            radius: "",
-            spaces: "",
-            type: "",
-            price: "",
-            input: true
+            form: {
+                startDate: new Date(),
+                endDate: new Date(),
+                location: "",
+                radius: "",
+                spaces: "",
+                type: "",
+                price: "",
+                input: true
+            }
 
 
         };
     }
 
-    // changeStart = (e) => {
-    //     this.setState({ startDate: e.target.value })
-    // }
 
     onChange = (e) => {
         this.setState({ startDate: e.target.value })
     }
 
     handleSubmit = (e) => {
-        e.preventDefault()
+        if (!this.validate()) {
+            e.preventDefault()
+            console.log("submit")
+        }
     }
 
     handleClick = (evt) => {
-        evt.preventDefault()
-
-        this.validateInputs()
-
+        evt.preventDefault();
+        console.log("button works")
     }
 
-    validateInputs = () => {
-
-        if (this.state) {
-            this.setState({ Input: true })
-        } else {
-            this.setState({ Input: false })
-        }
-
-    }
 
 
     render() {
-        // let { value } = this.state.start
 
-        let validInput = this.state.input
+
 
         return (
             <div className='search'>
+                <div>
+                    <p>Peace at last</p>
+                    <p>Get alot. off your mind</p>
+                </div>
                 <form className="form" onSubmit={this.handleSubmit}>
-                    <div className="datepicker">
-                        <label> Check-In:
-                            <DatePicker
-                                selected={this.state.startDate}
-                                selectsStart
-                                startDate={this.state.startDate}
-                                endDate={this.state.endDate}
-                                onChange={this.handleChangeStart}
-                            /></label>
-                        <label>Check-Out:
-                             <DatePicker
-                                selected={this.state.endDate}
-                                selectsEnd
-                                startDate={this.state.startDate}
-                                endDate={this.state.endDate}
-                                onChange={this.handleChangeEnd}
-                                minDate={this.state.startDate}
-                            /></label>
-                    </div>
-                    <div className="location">
-                    <label>Location:
-                    <input type="text" name="Location"></input>
-                    </label>
-                    <label>Radius: <input type="text" name="Radius" ></input> </label>
-                    </div>
-                    <label>Spaces:  <input type="text" name="Spaces" ></input></label>
-                    <div className="advancedSearch">
+                    <fieldset>
+                        <div className="datepicker">
+                            <label className="checkin"> CHECK-IN
+                           <div className="calendar"><DatePicker
+                                    selected={this.state.startDate}
+                                    selectsStart
+                                    startDate={this.state.startDate}
+                                    endDate={this.state.endDate}
+                                    onChange={this.handleChangeStart}
+                                /></div></label>
+                            <label className="checkout">CHECK-OUT
+                            <div className="calendar"><DatePicker
+                                    selected={this.state.endDate}
+                                    selectsEnd
+                                    startDate={this.state.startDate}
+                                    endDate={this.state.endDate}
+                                    onChange={this.handleChangeEnd}
+                                    minDate={this.state.startDate}
+                                /></div></label>
+                        </div>
+
+                        <label className="location">Location:<select ClassName="dropdown">
+                            <option>China Town</option>
+                            <option>Down Town</option>
+                            <option>Capitol HIll</option>
+                            <option>Dupont Circle</option>
+                            <option>Logan Circle</option>
+                            <option>Shaw</option>
+                            <option>Adams Morgan</option>
+                            <option>Columbia Heights</option>
+                        </select>
+                            <input type="text" name="Location"></input>
+                        </label>
+                        <label className="radius" >Radius:<select ClassName="dropdown" >
+                            <option>distance 1</option>
+                            <option>distance 2</option>
+                            <option>distance 3</option>
+                            <option>distance 4</option>
+                            <option>distance 5</option>
+                            <option>distance 6</option>
+                            <option>distance 7</option>
+                            <option>distance 8</option>
+                        </select> <input type="text" name="Radius" ></input> </label>
+                        <label className="spaces">Spaces: <select ClassName="dropdown" ></select> <input type="text" name="Spaces" ></input></label>
+                    </fieldset>
+                    {/* <fieldset>Advance Search
                         <label>Type <input type="text" name="Type"></input> </label>
                         <label>Price  <input type="text" name="Price"></input> </label>
-                    </div>
-                    <input className="submit" type="submit" onClick={this.handleClick} value="submit" />
-                    <p>{validInput}</p>
+                    </fieldset> */}
+                    <button className="submit" type="submit" onClick={this.handleClick} value="Submit" >Search</button>
+
                 </form>
             </div>
 
