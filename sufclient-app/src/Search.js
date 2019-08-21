@@ -46,10 +46,9 @@ class Search extends Component {
 
         return (
             <div className='search'>
-                <div>
-                    <p>Peace at last</p>
-                    <p>Get alot. off your mind</p>
-                </div>
+                
+                    <p>Get <span className='alot'>alot.</span> off your mind</p>
+
                 <form className="form">
                     <fieldset>
                         <div className="datepicker">

@@ -1,23 +1,18 @@
 import React, { Component } from 'react';
+import './Home.css'
 
-class Map extends Component {
-    initMap = (div) => {
-        map = new google.map.maps.Map(div), {
-            center: {lat: -34, lng: 150},
-            zoom: 8
-        }
-    }
+class Home extends Component {
 
     render() {
 
         return (
             <div>
+            </div >
 
-            </div>
         )
     }
 
 
 }
 
-export default Map;
+export default Home;

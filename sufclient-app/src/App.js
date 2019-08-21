@@ -165,7 +165,7 @@ class App extends Component {
               <Route
                 exact path="/"
                 render={props => {
-                  return <Home {...props} isLoggedIn={this.state.isLoggedIn} />;
+                  return <Home {...props} listings={[]} isLoggedIn={this.state.isLoggedIn} />;
                 }}
               />
               <Route

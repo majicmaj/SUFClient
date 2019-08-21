@@ -1,83 +1,44 @@
+fieldset {
+    border: none;
+}
+
 .search {
-    max-width:500px;
-    padding: 20px 12px 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    box-shadow: 2px 2px 3px #ddd;
     display: flex;
     flex-direction: column;
-    padding: 15px;
-    border: solid whitesmoke 2px;
-    margin: auto;
-    border-radius: 10px;
-}
-
-.search label{
-    display: flex;
-    align-items: stretch;
-    align-content: stretch;
-    flex-wrap: nowrap;
-    flex-direction: ltr;
-    flex-shrink: 1;
-    margin: 0px 0px 15px 0px;
-    border:none;
-
-}
-.form {
-    display:flex;
-    flex-direction: column;
-    align-content: flex-start;
-    border: none;
-
-}
-
-.search fieldset {
-    border: none;
-
-}
-.search Datepicker {
-    border: solid whitesmoke;
 }
 
 .datepicker {
-    display:flex;
-}
-
-.calendar{
-    display:flex;
-}
-
-.dropdown{
-
-    max-width: 100px;
-}
-
-/* .advancedSearch {
     display: flex;
-    flex-direction: row;
-} */
-
-.search input{
-    width: 100px;
-    /* height:50px; */
+    justify-content: space-around;
 }
 
-.search button[type=submit]
-{
+.react-date-picker__button {
+    margin: 0;
     border: none;
-    padding: 8px 15px 8px 15px;
-    background-color: rgb(237, 101, 100);
-    color: #FFFFFF;
-    padding: 10px;
-    border-radius: 3px;
-   align-self: flex-end;
-    width: 100px;
-    height:50px;
-    
+    box-shadow: none;
 }
 
-.search button[type=submit]:hover,
-.search button[type=button]:hover
+.react-date-picker__inputGroup__input {
+    margin: 0;
+    border: none;
+    box-shadow: none;
+}
 
-{
-    background:#EA7B00;
-    color: #fff;
+.react-date-picker__wrapper {
+    padding: 15px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    box-shadow: 2px 2px 3px #ddd;
+}
 
+form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
 }
