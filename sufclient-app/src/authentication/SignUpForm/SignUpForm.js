@@ -33,7 +33,7 @@ class SignUpForm extends Component {
           <p className='disclaimer'>don't use a real password because we store it curently</p>
 
           <div>
-            <input type='text' name='password' placeholder='Create a Password' onChange={this.props.handleInput} />
+            <input type='password' name='password' placeholder='Create a Password' onChange={this.props.handleInput} />
           </div>
 
           <p className='disclaimer'>disclaimer: by signing up for <span className='alot'>alot.</span> you are going to be handeling more amounts of awesome than a single person can handle. make sure you share the awesome with others so that you are not overwhelmed. Remember to have <span className='alot'>alot.</span> of fun</p>
