@@ -28,6 +28,13 @@ class Listing extends Component {
             })
     }
 
+    handleClick = (e) => {
+        console.log(e.target.key)
+        this.setState({ 
+            listing : e.target.key
+        })
+    }
+
     render() {
         console.log("thisss")
         console.log(this.state.data)
@@ -36,11 +43,11 @@ class Listing extends Component {
             var listing = this.state.data[0].map(listing => {
                 console.log(listing)
                 return (
-                    <Link to='/Singlelist' key={listing._id}><div className='lot'>
-                        <img src={Spot} />
-                        <p>Rate: ${listing.rate}</p>
-                        <p>Address:{listing.location.address},{listing.location.city}</p>
-                        <p>Reviews:</p>
+                    <Link to='/Singlelist' key={listing._id}><div className='lot' onClick={this.handleClick}>
+                        <img key={listing._id} src={Spot} />
+                        <p key={listing._id}>Rate: ${listing.rate}</p>
+                        <p key={listing._id}>Address:{listing.location.address},{listing.location.city}</p>
+                        <p key={listing._id}>Reviews:</p>
                     </div>
                     </Link>
 

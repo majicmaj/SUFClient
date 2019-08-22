@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import {Link } from 'react-router-dom'
+import Axios from 'axios';
 
 class Singlelisting extends Component {
 
@@ -6,8 +8,16 @@ class Singlelisting extends Component {
 
     handleClick = (e) => {
         e.preventDefault()
+        console.log(this.props.active)
+        Axios.put("https://alot-server.herokuapp.com/" + this.props._id, { active: false })
+            .then(res => {
+                console.log(res.data)
         console.log("work")
-    }
+        console.log(this.props.active)
+            
+    })
+}
+
 
     render() {
 
@@ -24,15 +34,16 @@ class Singlelisting extends Component {
                     <img src="{listing.img}" alt="{listing.name}" />
                 </div>
                 <div className="description">
-                    <h2>Entire Parking spot</h2>
+                   <Link to='/listing'> <h2>Entire Parking spot</h2></Link>
                     <p>2 parking spaces</p>
-                    <h2>Entire Parking spot</h2>
+                    <Link> <h2>Environment</h2></Link>
                     <p>Sparkling Clean</p>
-                    <h2>Sam is Superhost</h2>
+                    <Link> <h2>Sam Super Host!!!!</h2></Link>
                     <p>lorejfbdalbvdjbadjbfebejebefjbfejbfejbfejbfefqewjkbfqfeubjewjfqebfjbqfqlhjkb</p>
-                    <h2>Location</h2>
+                    <Link><h2>Location</h2></Link>
                     <p>recent guest</p>
-                    <h3>Read</h3>
+                    <Link><h2>ReadMore</h2></Link>
+                    <Link><h2>Concact Host</h2></Link>
                 </div>
                 <div className="Amenities">
                     <h4>Amenities</h4>

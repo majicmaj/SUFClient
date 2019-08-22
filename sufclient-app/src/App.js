@@ -22,6 +22,7 @@ class App extends Component {
     this.state = {
       email: "",
       password: "",
+      listing_id: "",
       isLoggedIn: false,
       redirect: false
     };

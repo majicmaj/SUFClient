@@ -1,8 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### alot..
 
-## Available Scripts
+alot.  A peer to peer application that allows individuals to lease their parking spaces/lots and driveways on a short basis to other individuals specifically during high traffic times(e.g. sporting events, concerts,street fairs etc.) 
 
-In the project directory, you can run:
+Our group is comprised of Majed Tarabein, Ashtin Latting and Samuel Shobowale.
 
 ### `npm start`
 
