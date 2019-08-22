@@ -1,54 +1,57 @@
 import React, { Component } from "react";
 import Search from "./imgs/search.svg";
-import { Navbar, NavItem } from "react-materialize";
+import { Link } from "react-router-dom";
 import "./Nav.css";
 
 class Nav extends Component {
   render() {
     let navBarItems = [
-      <NavItem className="item" key={1} href="/park">
+      <Link to='/park' className="item" key={1}>
         Park
-      </NavItem>,
-      <NavItem className="item" key={2} href="/host">
+      </Link>,
+      <Link to='/host' className="item" key={2}>
         Host
-      </NavItem>,
-      <NavItem className="item" key={3} href="/search">
+      </Link>,
+      <Link to='/search' className="item" key={3}>
         Search
-      </NavItem>,
+      </Link>,
+      <Link to='/listing' className="item" key={4}>
+      Listing
+    </Link>
     ];
 
     if (this.props.isLoggedIn) {
       navBarItems.push(
-        <NavItem className="item" key={4} href="/logout">
+        <Link to='/logout' className="item" key={5}>
           Log Out
-        </NavItem>
+        </Link>
       );
       navBarItems.push(
-        <NavItem className="item" key={5} href="/profile">
+        <Link to='/profile' className="item" key={6}>
           Profile
-        </NavItem>
+        </Link>
       );
     } else {
       navBarItems.push(
-        <NavItem className="item" key={6} href="/signup">
+        <Link to='/signup' className="item" key={7}>
           Sign Up
-        </NavItem>
+        </Link>
       );
       navBarItems.push(
-        <NavItem className="item" key={7} href="/login">
+        <Link to='/login' className="item" key={8}>
           Log In
-        </NavItem>
+        </Link>
       );
       
     }
     return (
       <div>
-        <Navbar>
+        <nav>
             <div className='nav'>
             <div className="left">
-            <NavItem>
+            <Link>
                 <h1>alot.</h1>
-            </NavItem>
+            </Link>
             <div className="input">
               <img className="searchIcon" src={Search} />
               <input type="text" placeholder="Find alot..." />
@@ -57,7 +60,7 @@ class Nav extends Component {
           <div className="right">{navBarItems}</div>
             </div>
         
-        </Navbar>
+        </nav>
       </div>
     );
   }
