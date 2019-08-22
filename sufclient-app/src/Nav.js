@@ -15,27 +15,30 @@ class Nav extends Component {
       <NavItem className="item" key={3} href="/search">
         Search
       </NavItem>,
+      <NavItem className="item" key={4} href="/listing">
+      Listing
+    </NavItem>
     ];
 
     if (this.props.isLoggedIn) {
       navBarItems.push(
-        <NavItem className="item" key={4} href="/logout">
+        <NavItem className="item" key={5} href="/logout">
           Log Out
         </NavItem>
       );
       navBarItems.push(
-        <NavItem className="item" key={5} href="/profile">
+        <NavItem className="item" key={6} href="/profile">
           Profile
         </NavItem>
       );
     } else {
       navBarItems.push(
-        <NavItem className="item" key={6} href="/signup">
+        <NavItem className="item" key={7} href="/signup">
           Sign Up
         </NavItem>
       );
       navBarItems.push(
-        <NavItem className="item" key={7} href="/login">
+        <NavItem className="item" key={8} href="/login">
           Log In
         </NavItem>
       );
