@@ -11,6 +11,7 @@ import Listing from "./Listing";
 import Search from "./Search";
 import "./App.css";
 import NoMatch from './NoMatch';
+import User from './User'
 
 class App extends Component {
   constructor() {
@@ -64,7 +65,8 @@ class App extends Component {
   }
 
   handleSignUp(e) {
-    console.log("FIRE!");
+    console.log("ASFASFSAF");
+    console.log(this.state)
     e.preventDefault();
     axios
       .post("https://alot-server.herokuapp.com/user/signup", {
@@ -74,7 +76,9 @@ class App extends Component {
       })
       .then(response => {
         localStorage.token = response.data.token;
-        this.setState({ isLoggedIn: true });
+        this.setState({ 
+          isLoggedIn: true,
+         });
         console.log("SIGNED TF UP");
       })
       .catch(err => console.log(err));
@@ -90,12 +94,17 @@ class App extends Component {
       })
       .then(response => {
         localStorage.token = response.data.token
-        this.setState({isLoggedIn: true})
+        this.setState({
+          isLoggedIn: true
+        })
         console.log("logged tf in")
         if ({isLoggedIn: true}) {
           console.log('trying to redirect')
+          console.log("before")
+          console.log(this.state.email)
           this.setRedirect()
-          console.log(this.state)
+          console.log("after")
+          console.log(this.state.email)
         }
       })
       .catch(err => console.log(err))
@@ -165,7 +174,13 @@ class App extends Component {
               <Route
                 exact path="/"
                 render={props => {
-                  return <Home {...props} listings={[]} isLoggedIn={this.state.isLoggedIn} />;
+                  return <Home {...props} theState={this.state} isLoggedIn={this.state.isLoggedIn} />;
+                }}
+              />
+              <Route
+                exact path="/profile"
+                render={props => {
+                  return <User isLoggedIn={this.state.isLoggedIn} {...props} />
                 }}
               />
               <Route
