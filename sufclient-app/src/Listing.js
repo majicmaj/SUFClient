@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from "axios";
+import Singlelisting from './Singlelisting'
 
 // const coindeskURL = 'https://alot-server.herokuapp.com/user/login';
 
@@ -63,10 +64,10 @@ class Listing extends Component {
                 <div className="container 3"> container 3</div>
                 <div className="container 4"> container 4</div> */}
                 {/* </div> */}
+                <div className="Singlelisting"><Singlelisting /> </div>
             </div>
-
         )
     }
-}
+}   
 
 export default Listing;
