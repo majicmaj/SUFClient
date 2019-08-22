@@ -20,9 +20,16 @@ class User extends Component {
         .then(res => {
             console.log(res.data)
             this.setState({
+            username: res.data.username,
             firstName: res.data.firstName,
             lastName: res.data.lastName,
-            carType: res.data.carType
+            carType: res.data.carType,
+            location: {
+                address: res.data.address,
+                city: res.data.city,
+                zipCode: res.data.zipcode,
+              },
+            password: res.data.password
         })
         
     })
@@ -40,9 +47,12 @@ class User extends Component {
         return (
             <div>
                 <h3> Hello {this.state.firstName} {this.state.lastName}</h3>
+                <p>your car is a {this.state.carType}</p>
+                {this.state.host}
+                <p>your city:</p>
                 <h3>Welcome to your alot. profile!</h3>
-                <button>add a vehicle</button>
-                <button>host alot.</button>
+                <button>vehicle</button>
+                <button>delete</button>
                 <button>edit profile</button>
             </div> 
 
