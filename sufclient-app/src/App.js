@@ -163,6 +163,12 @@ class App extends Component {
                 }}
               />
               <Route
+                exact path="/listing"
+                render={props => {
+                  return <Listing {...props} />
+                }}
+              />
+              <Route
                 exact path="/"
                 render={props => {
                   return <Home {...props} listings={[]} isLoggedIn={this.state.isLoggedIn} />;
@@ -172,7 +178,6 @@ class App extends Component {
                 component={NoMatch}
               />
             </Switch>
-            <Listing />
           </div>
         </div>
       </div>
