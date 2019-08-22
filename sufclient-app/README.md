@@ -2,7 +2,7 @@
 
 alot.  A peer to peer application that allows individuals to lease their parking spaces/lots and driveways on a short basis to other individuals specifically during high traffic times(e.g. sporting events, concerts,street fairs etc.) 
 
-Our group is comprised of Majed Tarabein, Ashtin Latting and Samuel Shobowale.
+This was a unique project in that it stretched the team made up Majed Tarabein, Ashtin Latting and Samuel Shobowale. This was not only where we are putting our full MERN knowledge to use, but also on like the previous projects, we had to come up with our own unique ideas. There were a few scrape and bumps along the way, but I have no doubt that this will lay a foundation for us as future developers.
 
 ### `npm start`
 
