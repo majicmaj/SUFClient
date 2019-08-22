@@ -20,8 +20,8 @@ class User extends Component {
         .then(res => {
             console.log(res.data)
             this.setState({
-            firstName: res.data.email,
-            lastName: res.data.location.city,
+            firstName: res.data.firstName,
+            lastName: res.data.lastName,
             carType: res.data.carType
         })
         
