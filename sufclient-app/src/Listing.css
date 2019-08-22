@@ -1,19 +1,57 @@
-
 .filters {
     display: flex;
     flex-direction: row;
-    align-content: flex-start;
+    justify-content: flex-start;
 }
 
-.location {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-content: flex-start;
+nav button {
+    padding: 15px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    box-shadow: 2px 2px 3px #ddd;
+    background: white;
 }
 
+.lot {
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    box-shadow: 2px 2px 3px #ddd;
+    background: white;
+    min-width: 250px;
+    min-height: 400px;
+    margin: 10px;
+}
 
+.lot img {
+    width: 100%;
+    max-height: 100%;
+}
 
-.Listing {
-    border: solid black 3px;
+.listingWrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    width: 100%;
+}
+
+@media only screen and (max-width: 1077px) {
+    .filters ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .filters li {
+        width: 100%;
+    }
+
+    nav button {
+        width: 80%;
+    }
+    nav select {
+        width: 80%;
+    }
+    Datepicker {
+        width: 80%;
+    }
+
 }
