@@ -68,6 +68,11 @@ input:focus, textarea:focus {
     justify-content: space-between;
 }
 
+.link {
+    text-decoration: none;
+    list-style: none;
+}
+
 .item {
     text-decoration: none;
     list-style: none;

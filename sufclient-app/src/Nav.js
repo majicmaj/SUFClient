@@ -14,10 +14,7 @@ class Nav extends Component {
       </Link>,
       <Link to='/search' className="item" key={3}>
         Search
-      </Link>,
-      <Link to='/listing' className="item" key={4}>
-      Listing
-    </Link>
+      </Link>
     ];
 
     if (this.props.isLoggedIn) {
@@ -49,7 +46,7 @@ class Nav extends Component {
         <nav>
             <div className='nav'>
             <div className="left">
-            <Link>
+            <Link className='link' to='/'>
                 <h1>alot.</h1>
             </Link>
             <div className="input">

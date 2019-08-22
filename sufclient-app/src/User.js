@@ -16,13 +16,13 @@ class User extends Component {
 
     componentDidMount() {
         console.log(this.props)
-        axios.get("https://alot-server.herokuapp.com/user/email" + this.props.email)
+        axios.get("https://alot-server.herokuapp.com/user/email" +"/" + this.props.email)
         .then(res => {
-            console.log(res)
+            console.log(res.data)
             this.setState({
-            firstName: res.firstName,
-            lastName: res.lastName,
-            carType: res.carType
+            firstName: res.data.email,
+            lastName: res.data.location.city,
+            carType: res.data.carType
         })
         
     })
