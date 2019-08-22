@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import Home from "./Home";
 import Nav from "./Nav";
 import axios from "axios";
@@ -93,19 +94,21 @@ class App extends Component {
         password: this.state.password
       })
       .then(response => {
+        console.log(response)
         localStorage.token = response.data.token
         this.setState({
           isLoggedIn: true
         })
-        console.log("logged tf in")
-        if ({isLoggedIn: true}) {
-          console.log('trying to redirect')
-          console.log("before")
-          console.log(this.state.email)
-          this.setRedirect()
-          console.log("after")
-          console.log(this.state.email)
-        }
+        this.props.history.push("/");
+        // console.log("logged tf in")
+        // if ({isLoggedIn: true}) {
+        //   // console.log('trying to redirect')
+        //   // console.log("before")
+        //   console.log(this.state.email)
+        //   this.setRedirect()
+        //   // console.log("after")
+        //   console.log(this.state.email)
+        // }
       })
       .catch(err => console.log(err))
 
@@ -186,7 +189,7 @@ class App extends Component {
               <Route
                 exact path="/profile"
                 render={props => {
-                  return <User isLoggedIn={this.state.isLoggedIn} {...props} />
+                  return <User isLoggedIn={this.state.isLoggedIn} email={this.state.email}  {...props} />
                 }}
               />
               <Route
@@ -200,4 +203,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default withRouter(App);
