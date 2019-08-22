@@ -48,13 +48,13 @@ class App extends Component {
       isLoggedIn: false
     });
     localStorage.clear();
-    this.setState({isLoggedIn: false})
-        console.log("logged tf out")
-        if ({isLoggedIn: false}) {
-          console.log('trying to redirect')
-          this.setRedirect()
-          console.log(this.state)
-        }
+    this.setState({ isLoggedIn: false })
+    console.log("logged tf out")
+    if ({ isLoggedIn: false }) {
+      console.log('trying to redirect')
+      this.setRedirect()
+      console.log(this.state)
+    }
   }
 
   handleInput(e) {
@@ -82,17 +82,17 @@ class App extends Component {
 
   handleLogIn(e) {
     console.log("log in my dude")
-      e.preventDefault()
-      axios.post('https://alot-server.herokuapp.com/user/login', {
-        withCredentials: true,
-        email: this.state.email,
-        password: this.state.password
-      })
+    e.preventDefault()
+    axios.post('https://alot-server.herokuapp.com/user/login', {
+      withCredentials: true,
+      email: this.state.email,
+      password: this.state.password
+    })
       .then(response => {
         localStorage.token = response.data.token
-        this.setState({isLoggedIn: true})
+        this.setState({ isLoggedIn: true })
         console.log("logged tf in")
-        if ({isLoggedIn: true}) {
+        if ({ isLoggedIn: true }) {
           console.log('trying to redirect')
           this.setRedirect()
           console.log(this.state)
@@ -102,7 +102,7 @@ class App extends Component {
 
   }
   setRedirect = () => {
-    this.setState({redirect : true})
+    this.setState({ redirect: true })
   }
   renderRedirect = () => {
     if (this.state.redirect) {
@@ -123,7 +123,7 @@ class App extends Component {
                 render={props => {
                   return (
                     <SignUpForm
-                      {...props} 
+                      {...props}
                       isLoggedIn={this.state.isLoggedIn}
                       handleInput={this.handleInput}
                       handleSignUp={this.handleSignUp}
@@ -163,6 +163,13 @@ class App extends Component {
                 }}
               />
               <Route
+                exact path="/listing"
+                render={props => {
+                  return <Listing {...props} />
+                }}
+              />
+
+              <Route
                 exact path="/"
                 render={props => {
                   return <Home {...props} listings={[]} isLoggedIn={this.state.isLoggedIn} />;
@@ -172,7 +179,6 @@ class App extends Component {
                 component={NoMatch}
               />
             </Switch>
-            <Listing />
           </div>
         </div>
       </div>
