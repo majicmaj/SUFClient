@@ -187,8 +187,6 @@ class App extends Component {
                   return <Singlelisting {...props} />
                 }}
               />
-
-
               <Route
                 exact path="/"
                 render={props => {
