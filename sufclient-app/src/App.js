@@ -76,9 +76,9 @@ class App extends Component {
       })
       .then(response => {
         localStorage.token = response.data.token;
-        this.setState({ 
+        this.setState({
           isLoggedIn: true,
-         });
+        });
         console.log("SIGNED TF UP");
       })
       .catch(err => console.log(err));
@@ -177,6 +177,14 @@ class App extends Component {
                   return <Listing {...props} />
                 }}
               />
+              <Route
+                exact path="/Singlelisting"
+                render={props => {
+                  return <Listing {...props} />
+                }}
+              />
+
+
               <Route
                 exact path="/"
                 render={props => {

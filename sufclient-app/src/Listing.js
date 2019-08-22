@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import DatePicker from 'react-date-picker'
 import axios from "axios";
+import { Link } from 'react-router-dom'
 import './Listing.css'
 import Spot from './imgs/spot.jpg'
-import Singlelisting from './Singlelisting'
 
 // const coindeskURL = 'https://alot-server.herokuapp.com/user/login';
 
@@ -36,12 +36,14 @@ class Listing extends Component {
             var listing = this.state.data[0].map(listing => {
                 console.log(listing)
                 return (
-                    <div className='lot' key={listing._id} >
-                        <img src={Spot}/>
+                    <Link to='/Single list' key={listing._id}><div className='lot'>
+                        <img src={Spot} />
                         <p>Rate: ${listing.rate}</p>
                         <p>Address:{listing.location.address},{listing.location.city}</p>
                         <p>Reviews:</p>
                     </div>
+                    </Link>
+
                 )
             })
         }
@@ -86,10 +88,16 @@ class Listing extends Component {
                 <div className="container 3"> container 3</div>
                 <div className="container 4"> container 4</div> */}
                 {/* </div> */}
-                <div className="Singlelisting"><Singlelisting /> </div>
+                {/* <div className="Singlelisting">{this =>
+                return(
+                    <Link to='/Singlelisting'>
+                        <img src={spot}/>
+                    </Link>
+                )
+                )} </div> */}
             </div>
         )
     }
-}   
+}
 
 export default Listing;
