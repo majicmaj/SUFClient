@@ -15,7 +15,8 @@ class User extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://alot-server.herokuapp.com/')
+        console.log(this.props)
+        axios.get(`https://alot-server.herokuapp.com/user/email/${this.props.email}`)
         .then(res => {
             console.log(res)
             this.setState({
@@ -37,7 +38,7 @@ class User extends Component {
 
         return (
             <div>
-                <h3> Hello {this.firstName} {this.lastName}</h3>
+                <h3> Hello {this.state.firstName} {this.state.lastName}</h3>
                 <h3>Welcome to your alot. profile!</h3>
                 <button>add a vehicle</button>
                 <button>host alot.</button>
