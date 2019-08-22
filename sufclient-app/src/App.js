@@ -94,13 +94,9 @@ class App extends Component {
     })
       .then(response => {
         localStorage.token = response.data.token
-<<<<<<< HEAD
-        this.setState({ isLoggedIn: true })
-=======
         this.setState({
           isLoggedIn: true
         })
->>>>>>> ca5737ed23dabcad6b7c61de9b9297dda3429b81
         console.log("logged tf in")
         if ({ isLoggedIn: true }) {
           console.log('trying to redirect')
@@ -181,10 +177,6 @@ class App extends Component {
                   return <Listing {...props} />
                 }}
               />
-<<<<<<< HEAD
-
-=======
->>>>>>> ca5737ed23dabcad6b7c61de9b9297dda3429b81
               <Route
                 exact path="/"
                 render={props => {
