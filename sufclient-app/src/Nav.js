@@ -43,7 +43,9 @@ class Nav extends Component {
         <Navbar>
             <div className='nav'>
             <div className="left">
-            <h1>alot.</h1>
+            <NavItem>
+                <h1>alot.</h1>
+            </NavItem>
             <div className="input">
               <img className="searchIcon" src={Search} />
               <input type="text" placeholder="Find alot..." />
