@@ -182,13 +182,11 @@ class App extends Component {
                 }}
               />
               <Route
-                exact path="/Singlelisting"
+                exact path="/Singlelist"
                 render={props => {
                   return <Singlelisting {...props} />
                 }}
               />
-
-
               <Route
                 exact path="/"
                 render={props => {

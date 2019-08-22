@@ -36,7 +36,7 @@ class Listing extends Component {
             var listing = this.state.data[0].map(listing => {
                 console.log(listing)
                 return (
-                    <Link to='/Single list' key={listing._id}><div className='lot'>
+                    <Link to='/Singlelist' key={listing._id}><div className='lot'>
                         <img src={Spot} />
                         <p>Rate: ${listing.rate}</p>
                         <p>Address:{listing.location.address},{listing.location.city}</p>
