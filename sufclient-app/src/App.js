@@ -99,17 +99,6 @@ class App extends Component {
         this.setState({
           isLoggedIn: true
         })
-<<<<<<< HEAD
-        console.log("logged tf in")
-        if ({ isLoggedIn: true }) {
-          console.log('trying to redirect')
-          console.log("before")
-          console.log(this.state.email)
-          this.setRedirect()
-          console.log("after")
-          console.log(this.state.email)
-        }
-=======
         this.props.history.push("/");
         // console.log("logged tf in")
         // if ({isLoggedIn: true}) {
@@ -120,7 +109,6 @@ class App extends Component {
         //   // console.log("after")
         //   console.log(this.state.email)
         // }
->>>>>>> user
       })
       .catch(err => console.log(err))
 
