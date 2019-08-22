@@ -13,6 +13,7 @@ import Search from "./Search";
 import "./App.css";
 import NoMatch from './NoMatch';
 import User from './User'
+import Singlelisting from "./Singlelisting";
 
 class App extends Component {
   constructor() {
@@ -183,7 +184,7 @@ class App extends Component {
               <Route
                 exact path="/Singlelisting"
                 render={props => {
-                  return <Listing {...props} />
+                  return <Singlelisting {...props} />
                 }}
               />
 
