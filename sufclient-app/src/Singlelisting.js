@@ -4,13 +4,13 @@ class Singlelisting extends Component {
 
     //button to click event to confirm that the booking has gone through
 
-    handleClick = (link) => {
-        window.location.href = link
+    handleClick = (e) => {
+        e.preventDefault()
+        console.log("work")
     }
 
-
-
     render() {
+
 
         // let list = this.props.listing.find(list => {
         //     return 
@@ -40,7 +40,7 @@ class Singlelisting extends Component {
                     <p>Gas station close by</p>
                     <p>wifi</p>
                 </div>
-                <button>Reserve</button>
+                <button className="Reserve" type="button" onClick={this.handleClick}>Reserve</button>
             </div>
         )
     }
