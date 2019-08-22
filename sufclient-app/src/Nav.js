@@ -14,7 +14,10 @@ class Nav extends Component {
       </NavItem>,
       <NavItem className="item" key={3} href="/search">
         Search
-      </NavItem>
+      </NavItem>,
+      <NavItem className="item" key={3} href="/listing">
+      Listing
+    </NavItem>
     ];
 
     if (this.props.isLoggedIn) {
