@@ -15,9 +15,6 @@ class Nav extends Component {
       <NavItem className="item" key={3} href="/search">
         Search
       </NavItem>,
-      <NavItem className="item" key={3} href="/listing">
-      Listing
-    </NavItem>
     ];
 
     if (this.props.isLoggedIn) {
@@ -26,24 +23,32 @@ class Nav extends Component {
           Log Out
         </NavItem>
       );
+      navBarItems.push(
+        <NavItem className="item" key={5} href="/profile">
+          Profile
+        </NavItem>
+      );
     } else {
       navBarItems.push(
-        <NavItem className="item" key={5} href="/signup">
+        <NavItem className="item" key={6} href="/signup">
           Sign Up
         </NavItem>
       );
       navBarItems.push(
-        <NavItem className="item" key={6} href="/login">
+        <NavItem className="item" key={7} href="/login">
           Log In
         </NavItem>
       );
+      
     }
     return (
       <div>
         <Navbar>
             <div className='nav'>
             <div className="left">
-            <h1>alot.</h1>
+            <NavItem>
+                <h1>alot.</h1>
+            </NavItem>
             <div className="input">
               <img className="searchIcon" src={Search} />
               <input type="text" placeholder="Find alot..." />

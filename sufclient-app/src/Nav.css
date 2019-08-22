@@ -85,8 +85,8 @@ input:focus, textarea:focus {
     display: none;
 }
 
-@media only screen and (max-width: 768px) {
-    /* For mobile phones: */
+@media only screen and (max-width: 1077px) {
+    /* For mobile phones: 768 */
     .hide-on-med-and-down {
         display: none;
     }

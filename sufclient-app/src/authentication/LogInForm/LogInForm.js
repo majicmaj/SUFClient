@@ -8,7 +8,7 @@ class LogInForm extends Component {
         <p>Welcome back to <span className='alot'>alot.</span></p>
         <form>
           <div>
-            <input type='text' name='email' placeholder='Email address' onChange={this.props.handleInput} />
+            <input type='email' name='email' placeholder='Email address' onChange={this.props.handleInput} />
           </div>
           <div>
             <input type='password' name='password' placeholder='Create a password' onChange={this.props.handleInput} />
