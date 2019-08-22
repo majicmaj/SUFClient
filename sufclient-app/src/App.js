@@ -44,16 +44,16 @@ class App extends Component {
     }
   }
 
-  handleLogOut() {
+  handleLogOut = () => {
+    console.log('IM BEING CALLED')
     this.setState({
       email: "",
       password: "",
       isLoggedIn: false
-    });
-    localStorage.clear();
-    this.setState({ isLoggedIn: false })
+    })
+    localStorage.clear()
     console.log("logged tf out")
-    if ({ isLoggedIn: false }) {
+    if (this.state.isLoggedIn == false) {
       console.log('trying to redirect')
       this.setRedirect()
       console.log(this.state)
