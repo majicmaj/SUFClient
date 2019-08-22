@@ -23,6 +23,12 @@ class App extends Component {
       email: "",
       password: "",
       isLoggedIn: false,
+      firstName: "",
+      lastName: "",
+      username: "",
+      city: "",
+      zipcode: 0,
+      address: "",
       redirect: false
     };
 
@@ -72,12 +78,20 @@ class App extends Component {
     e.preventDefault();
     axios
       .post("https://alot-server.herokuapp.com/user/signup", {
-        withCredentials: true,
         email: this.state.email,
-        password: this.state.password
+        username: this.state.username,
+        firstName: this.state.firstName,
+        lastName: this.state.lastName,
+        location: {
+          address: this.state.address,
+          city: this.state.city,
+          zipCode: this.state.zipcode,
+        },
+        password: this.state.password,
       })
       .then(response => {
         localStorage.token = response.data.token;
+        console.log(response.data)
         this.setState({
           isLoggedIn: true,
         });
@@ -124,6 +138,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state)
     return (
       <div className="App">
         <div>
