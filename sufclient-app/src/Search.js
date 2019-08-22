@@ -52,7 +52,7 @@ class Search extends Component {
                 <form className="form">
                     <fieldset>
                         <div className="datepicker">
-                            <label className="checkin"> CHECK-IN
+                            <label className="checkin"> Check-in
                            <div className="calendar"><DatePicker
                                     selected={this.state.startDate}
                                     selectsStart
@@ -60,7 +60,7 @@ class Search extends Component {
                                     endDate={this.state.endDate}
                                     onChange={this.handleChangeStart}
                                 /></div></label>
-                            <label className="checkout">CHECK-OUT
+                            <label className="checkout">Check-out
                             <div className="calendar"><DatePicker
                                     selected={this.state.endDate}
                                     selectsEnd
@@ -74,7 +74,7 @@ class Search extends Component {
                         <label className="location">Location:<select ClassName="dropdown">
                             <option>China Town</option>
                             <option>Down Town</option>
-                            <option>Capitol HIll</option>
+                            <option>Capitol Hill</option>
                             <option>Dupont Circle</option>
                             <option>Logan Circle</option>
                             <option>Shaw</option>
