@@ -1,0 +1,18 @@
+button {
+    background: #fa0;
+}
+
+.carfield {
+    width: 95%;
+    margin: auto;
+}
+
+.section {
+    border: 1px solid #999;
+    max-width: 80%;
+    margin: auto;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    box-shadow: 2px 2px 3px #ddd;
+    background: white;
+}

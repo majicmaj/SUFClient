@@ -8,9 +8,11 @@ class Home extends Component {
 
         return (
             <div>
-                <h1>There is <span className='alot'>alot.</span> of webpages. this one is not one of them.</h1>
-                <h2>Search for something else</h2>
-            <Search />
+                <div className='noMatch'>
+                    <h1>There is <span className='alot'>alot.</span> of webpages. this one is not one of them.</h1>
+                    <h2>Search for something else</h2>
+                </div>
+                <Search />
             </div >
 
         )

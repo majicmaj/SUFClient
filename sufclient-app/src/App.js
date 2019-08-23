@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 import Home from "./Home";
+import Host from './Host'
 import Nav from "./Nav";
 import axios from "axios";
 import SignUpForm from "./authentication/SignUpForm/SignUpForm";
@@ -235,13 +236,25 @@ handleUpdate= () => {
               <Route
                 exact path="/profile"
                 render={props => {
-                  return <User 
-                  isLoggedIn={this.state.isLoggedIn}
-                  email={this.state.email}
-                  handleInput={this.handleInput}  
-                  handleRemove={this.handleRemove} 
-                  handleUpdate={this.handleUpdate}
-                  {...props} />
+                  return <User
+                    isLoggedIn={this.state.isLoggedIn}
+                    email={this.state.email}
+                    handleInput={this.handleInput}
+                    handleRemove={this.handleRemove}
+                    handleUpdate={this.handleUpdate}
+                    {...props} />
+                }}
+              />
+              <Route
+                exact path="/host"
+                render={props => {
+                  return <Host
+                    isLoggedIn={this.state.isLoggedIn}
+                    email={this.state.email}
+                    handleInput={this.handleInput}
+                    handleRemove={this.handleRemove}
+                    handleUpdate={this.handleUpdate}
+                    {...props} />
                 }}
               />
               <Route

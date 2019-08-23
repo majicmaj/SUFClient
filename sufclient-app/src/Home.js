@@ -10,8 +10,8 @@ class Home extends Component {
         return (
             <div>
                 <h1>{this.props.isLoggedIn}</h1>
-                <Map listings={this.props.listings}/>
-                
+                <Map listings={this.props.listings} />
+
             </div >
 
         )

@@ -25,7 +25,8 @@ li {
     box-shadow: 2px 2px 3px #ddd;
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .input input {
@@ -112,7 +113,8 @@ input:focus, textarea:focus {
         width: 70%;
         margin: 0;
         margin-top: 5px;
-        padding: 5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
         height: 25px;
     }
     h1 {

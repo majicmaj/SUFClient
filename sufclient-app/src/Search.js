@@ -64,65 +64,91 @@ class Search extends Component {
 
         return (
             <div className='search'>
-                
-                    <p>Get <span className='alot'>alot.</span> off your mind</p>
 
-                <form className="form">
-                    <fieldset>
-                        <div className="datepicker">
-                            <label className="checkin"> Check-in
-                           <div className="calendar"><DatePicker
-                                    selected={this.state.startDate}
-                                    selectsStart
-                                    startDate={this.state.startDate}
-                                    endDate={this.state.endDate}
-                                    onChange={this.handleChangeStart}
-                                /></div></label>
-                            <label className="checkout">Check-out
-                            <div className="calendar"><DatePicker
-                                    selected={this.state.endDate}
-                                    selectsEnd
-                                    startDate={this.state.startDate}
-                                    endDate={this.state.endDate}
-                                    onChange={this.handleChangeEnd}
-                                    minDate={this.state.startDate}
-                                /></div></label>
-                        </div>
+                <p>Get <span className='alot'>alot.</span> off your mind</p>
 
-                        <label className="location">Location:<select className="dropdown">
-                            <option>China Town</option>
-                            <option>Down Town</option>
-                            <option>Capitol Hill</option>
-                            <option>Dupont Circle</option>
-                            <option>Logan Circle</option>
-                            <option>Shaw</option>
-                            <option>Adams Morgan</option>
-                            <option>Columbia Heights</option>
-                        </select>
-                            <input type="text" name="Location"></input>
-                        </label>
-                        <label className="radius" >Radius:<select ClassName="dropdown" >
-                            <option>distance 1</option>
-                            <option>distance 2</option>
-                            <option>distance 3</option>
-                            <option>distance 4</option>
-                            <option>distance 5</option>
-                            <option>distance 6</option>
-                            <option>distance 7</option>
-                            <option>distance 8</option>
-                        </select> <input type="text" name="Radius" ></input> </label>
-                        <label className="spaces">Spaces: <select ClassName="dropdown" ></select> <input type="text" name="Spaces" ></input></label>
-                    </fieldset>
-                    {/* <fieldset>Advance Search
+                <fieldset>
+                    <div className="datepicker">
+
+                    </div>
+                    <label className="checkin"> Check-in</label>
+                    <select className="dropdown">
+                        <option>1:00am</option>
+                        <option>2:00am</option>
+                        <option>3:00am</option>
+                        <option>4:00am</option>
+                        <option>5:00am</option>
+                        <option>6:00am</option>
+                        <option>7:00am</option>
+                        <option>8:00am</option>
+                        <option>9:00am</option>
+                        <option>10:00am</option>
+                        <option>11:00am</option>
+                        <option>12:00am</option>
+                        <option>1:00pm</option>
+                        <option>2:00pm</option>
+                        <option>3:00pm</option>
+                        <option>4:00pm</option>
+                        <option>5:00pm</option>
+                        <option>6:00pm</option>
+                        <option>7:00pm</option>
+                        <option>8:00pm</option>
+                        <option>9:00pm</option>
+                        <option>10:00pm</option>
+                        <option>11:00pm</option>
+                        <option>12:00pm</option>
+                    </select>
+                    <select className="dropdown">
+                        <option>1:00am</option>
+                        <option>2:00am</option>
+                        <option>3:00am</option>
+                        <option>4:00am</option>
+                        <option>5:00am</option>
+                        <option>6:00am</option>
+                        <option>7:00am</option>
+                        <option>8:00am</option>
+                        <option>9:00am</option>
+                        <option>10:00am</option>
+                        <option>11:00am</option>
+                        <option>12:00am</option>
+                        <option>1:00pm</option>
+                        <option>2:00pm</option>
+                        <option>3:00pm</option>
+                        <option>4:00pm</option>
+                        <option>5:00pm</option>
+                        <option>6:00pm</option>
+                        <option>7:00pm</option>
+                        <option>8:00pm</option>
+                        <option>9:00pm</option>
+                        <option>10:00pm</option>
+                        <option>11:00pm</option>
+                        <option>12:00pm</option>
+                    </select>
+                    <p>Address</p>
+                    <input type='text' placeholder='1458 Dr' />
+                    <select className="dropdown">
+                        <option>Washington, DC</option>
+                    </select>
+                    <input type='number' placeholder='zipcode' />
+                    <p>Radius</p>
+                    <select ClassName="dropdown" >
+                        <option>1 Mile</option>
+                    </select> 
+                    <input type="text" name="Radius"/>
+
+                    <p>Spaces</p>
+                    <select ClassName="dropdown" ></select>
+                    <input type="text" name="Spaces"/ >
+                    
+                </fieldset>
+                {/* <fieldset>Advance Search
                         <label>Type <input type="text" name="Type"></input> </label>
                         <label>Price  <input type="text" name="Price"></input> </label>
                     </fieldset> */}
-                    <div>
-                        {this.renderRedirect()}
-                        <button className="submit" type="submit" onClick={this.setRedirect} >Search</button>
-                    </div>
-
-                </form>
+                <div>
+                    {this.renderRedirect()}
+                    <button className="submit" type="submit" onClick={this.setRedirect} >Search</button>
+                </div>
             </div>
 
         )

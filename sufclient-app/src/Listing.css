@@ -5,8 +5,10 @@
 }
 
 nav button {
-    padding: 15px;
-    margin: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     border: 1px solid #ddd;
     border-radius: 2px;
     box-shadow: 2px 2px 3px #ddd;
@@ -43,7 +45,6 @@ nav button {
     .filters li {
         width: 100%;
     }
-
     nav button {
         width: 80%;
     }
@@ -53,5 +54,4 @@ nav button {
     Datepicker {
         width: 80%;
     }
-
 }
