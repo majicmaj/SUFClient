@@ -24,6 +24,7 @@ class App extends Component {
       password: "",
       isLoggedIn: false,
       firstName: "",
+      carType: "",
       lastName: "",
       username: "",
       city: "",
@@ -128,6 +129,31 @@ class App extends Component {
       .catch(err => console.log(err))
 
   }
+
+  handleRemove = () => {
+    console.log("qwertyuil")
+    console.log(this.state)
+    axios.delete("https://alot-server.herokuapp.com/user/email" +"/" + this.state.email) 
+        .then(res => {
+            console.log("delete this bihhhh")
+        })
+        .catch(r => console.log(r))
+}
+
+handleUpdate= () => {
+  console.log("qwertyuil")
+  console.log(this.state.carType)
+  axios.put("https://alot-server.herokuapp.com/user/email" +"/" + this.state.email, {
+    carType: this.state.carType
+  }) 
+      .then(res => {
+          console.log("update")
+      })
+      .catch(r => console.log('no update'))
+}
+
+
+
   setRedirect = () => {
     this.setState({ redirect: true })
   }
@@ -211,7 +237,13 @@ class App extends Component {
               <Route
                 exact path="/profile"
                 render={props => {
-                  return <User isLoggedIn={this.state.isLoggedIn} email={this.state.email}  {...props} />
+                  return <User 
+                  isLoggedIn={this.state.isLoggedIn}
+                  email={this.state.email}
+                  handleInput={this.handleInput}  
+                  handleRemove={this.handleRemove} 
+                  handleUpdate={this.handleUpdate}
+                  {...props} />
                 }}
               />
               <Route

@@ -89,7 +89,7 @@ class Search extends Component {
                                 /></div></label>
                         </div>
 
-                        <label className="location">Location:<select ClassName="dropdown">
+                        <label className="location">Location:<select className="dropdown">
                             <option>China Town</option>
                             <option>Down Town</option>
                             <option>Capitol Hill</option>

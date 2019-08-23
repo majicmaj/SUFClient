@@ -51,9 +51,11 @@ class User extends Component {
                 {this.state.host}
                 <p>your city:</p>
                 <h3>Welcome to your alot. profile!</h3>
-                <button>vehicle</button>
-                <button>delete</button>
-                <button>edit profile</button>
+                <div>
+                    <input type='text' name='carType' onChange={this.props.handleInput}></input>
+                    <button onClick={this.props.handleUpdate}>vehicle</button>
+                </div>
+                <button onClick={this.props.handleRemove}>delete</button>
             </div> 
 
         )
