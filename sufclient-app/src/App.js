@@ -59,12 +59,6 @@ class App extends Component {
       isLoggedIn: false
     })
     localStorage.clear()
-    console.log("logged tf out")
-    if (this.state.isLoggedIn == false) {
-      console.log('trying to redirect')
-      this.setRedirect()
-      console.log(this.state)
-    }
   }
 
   handleInput(e) {
@@ -133,7 +127,9 @@ class App extends Component {
     this.setState({ redirect: true })
   }
   renderRedirect = () => {
+    console.log('REDIRECT')
     if (this.state.redirect) {
+      console.log('REDIRECT')
       return <Redirect to='/' />
     }
   }
@@ -145,8 +141,8 @@ class App extends Component {
         <div>
           <Nav isLoggedIn={this.state.isLoggedIn} />
           <div className="body">
+            {this.renderRedirect()}
             <Switch>
-              {this.renderRedirect()}
               <Route
                 path="/signup"
                 render={props => {
