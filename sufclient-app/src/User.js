@@ -47,12 +47,24 @@ class User extends Component {
 
         return (
             <div>
-                <h3> Hello {this.state.firstName} {this.state.lastName}</h3>
-                <p>Cars: {this.state.carType}</p>
-                <p>Location</p>
+                <h3>Hello, {this.state.firstName} {this.state.lastName}</h3>
+                <div className='cars'>
+                    <h3>Cars:</h3>
+                    <p>{this.state.carType}</p>
+                </div>
                 <h3>Welcome to your alot. profile!</h3>
                 <div>
-                    <input type='text' name='carType' onChange={this.props.handleInput}></input>
+
+                    <select className="dropdown" name='carType' onChange={this.props.handleInput}>
+                        <option>Kia Rio</option>
+                        <option>Mustang</option>
+                        <option>The bat mobile</option>
+                        <option>Tesla</option>
+                        <option>Toytoa Camry</option>
+                        <option>The horse from old town road</option>
+                    </select>
+
+                    <input className='input carfield' type='text' name='carType' onChange={this.props.handleInput}></input>
                     <button onClick={this.props.handleUpdate}>vehicle</button>
                 </div>
                 <button onClick={this.props.handleRemove}>delete</button>
