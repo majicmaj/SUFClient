@@ -5,7 +5,7 @@ alot.  A peer to peer application that allows individuals to lease their parking
 This was truly a unique project; it stretched our team (Majed Tarabein, Ashtin Latting and Samuel Shobowale). 
 We not only had to put our full MERN knowledge to use, we also had come up with a creative viable product.
 
-[A-Team](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png
+![A-Team](https://mail.google.com/mail/u/0?ui=2&ik=4cc4692ac9&attid=0.1.1&permmsgid=msg-f:1642615811488682134&th=16cbbe60aa391096&view=fimg&sz=s0-l75-ft&attbid=ANGjdJ-y0-ZRI0Q5XJOL54k0iMfXxhfLxIy3jGVbmHCBkec90Gjha5T1ObK5ynf5jI9g2Cj4c3egtD7cNAWxEK43OfQ7TS5v3JhHeE7I_sQ_8cbp7yGZssNeWEiwQ1A&disp=emb)
 
 This was certainly different from our previous projects where we worked individually, and the project ideas were provided to us.
 
