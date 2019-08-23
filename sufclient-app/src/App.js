@@ -149,6 +149,7 @@ handleUpdate= () => {
   }) 
       .then(res => {
           console.log("update")
+          this.forceUpdate()
       })
       .catch(r => console.log('no update'))
 }
