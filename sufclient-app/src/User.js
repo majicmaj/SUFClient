@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import './User.css'
 
 class User extends Component {
     constructor(props) {
@@ -16,23 +17,23 @@ class User extends Component {
 
     componentDidMount() {
         console.log(this.props)
-        axios.get("https://alot-server.herokuapp.com/user/email" +"/" + this.props.email)
-        .then(res => {
-            console.log(res.data)
-            this.setState({
-            username: res.data.username,
-            firstName: res.data.firstName,
-            lastName: res.data.lastName,
-            carType: res.data.carType,
-            location: {
-                address: res.data.address,
-                city: res.data.city,
-                zipCode: res.data.zipcode,
-              },
-            password: res.data.password
-        })
-        
-    })
+        axios.get("https://alot-server.herokuapp.com/user/email" + "/" + this.props.email)
+            .then(res => {
+                console.log(res.data)
+                this.setState({
+                    username: res.data.username,
+                    firstName: res.data.firstName,
+                    lastName: res.data.lastName,
+                    carType: res.data.carType,
+                    location: {
+                        address: res.data.address,
+                        city: res.data.city,
+                        zipCode: res.data.zipcode,
+                    },
+                    password: res.data.password
+                })
+
+            })
     }
 
     onChange(e) {
@@ -47,16 +48,15 @@ class User extends Component {
         return (
             <div>
                 <h3> Hello {this.state.firstName} {this.state.lastName}</h3>
-                <p>your car is a {this.state.carType}</p>
-                {this.state.host}
-                <p>your city:</p>
+                <p>Cars: {this.state.carType}</p>
+                <p>Location</p>
                 <h3>Welcome to your alot. profile!</h3>
                 <div>
                     <input type='text' name='carType' onChange={this.props.handleInput}></input>
                     <button onClick={this.props.handleUpdate}>vehicle</button>
                 </div>
                 <button onClick={this.props.handleRemove}>delete</button>
-            </div> 
+            </div>
 
         )
     }
