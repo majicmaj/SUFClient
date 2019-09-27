@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Axios from 'axios'
-import { Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 import './Home.css'
 
 export class MapContainer extends Component {
@@ -34,27 +34,29 @@ export class MapContainer extends Component {
         let listings = []
 
         if (this.state.data[0]) {
-            this.state.data[0].map(listing=> {
+            this.state.data[0].map(listing => {
                 listings.push(
                     <Marker onClick={this.onMarkerClick}
                         name={listing.address} />
                 )
             })
         }
+        console.log(process.env)
         return (
             <div>
-                <Map 
-                google={this.props.google} 
+                <p>Mode: {process.env.mode}</p>
+                <Map
+                    google={this.props.google}
                     initialCenter={{
                         lat: 38.894885,
                         lng: -77.031907
                     }}
-                zoom={17}
+                    zoom={17}
                 >
 
                     <Marker onClick={this.onMarkerClick}
                         name={'Current location'} />
-                        {listings}
+                    {listings}
 
                     <InfoWindow onClose={this.onInfoWindowClose}>
                         <div>
