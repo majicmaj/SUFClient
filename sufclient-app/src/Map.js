@@ -41,10 +41,8 @@ export class MapContainer extends Component {
                 )
             })
         }
-        console.log(process.env)
         return (
             <div>
-                <p>Mode: {process.env.mode}</p>
                 <Map
                     google={this.props.google}
                     initialCenter={{
@@ -73,5 +71,5 @@ export class MapContainer extends Component {
 }
 
 export default GoogleApiWrapper({
-    apiKey: (process.env.key) || ''
+    apiKey: (process.env.key)
 })(MapContainer)
